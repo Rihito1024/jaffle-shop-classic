@@ -1,0 +1,38 @@
+version: 2
+models:
+  - name: customers
+    columns:
+      - name: CUSTOMER_ID
+        description: ''
+      - name: FIRST_NAME
+        description: 名前
+      - name: LAST_NAME
+        description: 苗字
+      - name: FIRST_ORDER
+        description: ''
+      - name: MOST_RECENT_ORDER
+        description: ''
+      - name: NUMBER_OF_ORDERS
+        description: ''
+      - name: CUSTOMER_LIFETIME_VALUE
+        description: ''
+  - name: orders
+    columns:
+      - name: ORDER_ID
+        description: オーダーID
+      - name: CUSTOMER_ID
+        description: ''
+      - name: ORDER_DATE
+        description: 注文日
+      - name: STATUS
+        description: 状態
+      - name: CREDIT_CARD_AMOUNT
+        description: ''
+      - name: COUPON_AMOUNT
+        description: ''
+      - name: BANK_TRANSFER_AMOUNT
+        description: ''
+      - name: GIFT_CARD_AMOUNT
+        description: ''
+      - name: AMOUNT
+        description: 金額

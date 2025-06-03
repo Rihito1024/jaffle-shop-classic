@@ -19,8 +19,17 @@ clean-targets:
 
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
+seeds:
+  jaffle_shop:
+      +materialized: seed
+      +schema: RAW
+
 models:
   jaffle_shop:
-      materialized: table
-      staging:
-        materialized: view
+    marts:
+      +materialized: table
+      +schema: MARTS
+    intermediate:
+      +materialized: table
+      +schema: INTERMEDIATE
+

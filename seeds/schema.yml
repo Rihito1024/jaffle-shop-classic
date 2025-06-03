@@ -1,0 +1,48 @@
+seeds:
+  - name: raw_customers
+    columns:
+      - name: ID
+        description: 顧客ID
+        tests:
+          - not_null
+          - unique
+      - name: FIRST_NAME
+        description: 名前
+        tests:
+          - not_null
+      - name: LAST_NAME
+        description: 苗字
+        tests:
+          - not_null
+
+  - name: raw_orders
+    columns:
+      - name: ID
+        description: オーダーID
+        tests:
+          - not_null
+          - unique
+      - name: USER_ID
+        description: 顧客ID
+        tests:
+          - not_null
+      - name: ORDER_DATE
+        description: 注文日
+        tests:
+          - not_null
+      - name: STATUS
+        description: 状態
+  - name: raw_payments
+    columns:
+      - name: ID
+        description: 支払いID
+        tests:
+          - not_null
+      - name: ORDER_ID
+        description: オーダーID
+        tests:
+          - not_null
+      - name: PAYMENT_METHOD
+        description: 支払方法
+      - name: AMOUNT
+        description: 金額

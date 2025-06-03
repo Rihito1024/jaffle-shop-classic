@@ -1,0 +1,30 @@
+version: 2
+models:
+  - name: stg_orders
+    columns:
+      - name: ORDER_ID
+        description: ''
+      - name: CUSTOMER_ID
+        description: ''
+      - name: ORDER_DATE
+        description: 注文日
+      - name: STATUS
+        description: 状態
+  - name: stg_customers
+    columns:
+      - name: CUSTOMER_ID
+        description: ''
+      - name: FIRST_NAME
+        description: 名前
+      - name: LAST_NAME
+        description: 苗字
+  - name: stg_payments
+    columns:
+      - name: PAYMENT_ID
+        description: ''
+      - name: ORDER_ID
+        description: オーダーID
+      - name: PAYMENT_METHOD
+        description: 支払方法
+      - name: AMOUNT
+        description: 金額
